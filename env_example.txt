@@ -1,0 +1,16 @@
+# LLM Provider API Keys
+OPENAI_API_KEY=your_openai_api_key_here
+GOOGLE_API_KEY=your_google_api_key_here
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# BrightData API Key (for X scraping)
+BRIGHTDATA_API_KEY=your_brightdata_api_key_here
+
+# YouTube API Key (for video analysis)
+YOUTUBE_API_KEY=your_youtube_api_key_here
+
+# Optional: Other API Keys
+TWITTER_API_KEY=your_twitter_api_key_here
+TWITTER_API_SECRET=your_twitter_api_secret_here
+TWITTER_ACCESS_TOKEN=your_twitter_access_token_here
+TWITTER_ACCESS_TOKEN_SECRET=your_twitter_access_token_secret_here

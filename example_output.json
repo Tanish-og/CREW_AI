@@ -1,0 +1,160 @@
+{
+    "analysis_summary": {
+        "total_creators": 10,
+        "total_tweets_analyzed": 2000,
+        "overall_sentiment_distribution": {
+            "bullish": 4,
+            "bearish": 3,
+            "neutral": 3
+        },
+        "analysis_timestamp": "2024-01-15T10:30:00Z",
+        "processing_time_seconds": 45.2
+    },
+    "creator_analysis": {
+        "elonmusk": {
+            "overall_sentiment": "bullish",
+            "sentiment_score": 0.245,
+            "confidence": 0.89,
+            "tweet_count": 200,
+            "followers": 150000000,
+            "verified": true,
+            "tickers": [
+                {
+                    "ticker": "$TSLA",
+                    "direction": "bullish",
+                    "sentiment_score": 0.312,
+                    "mention_count": 15
+                },
+                {
+                    "ticker": "$DOGE",
+                    "direction": "bullish",
+                    "sentiment_score": 0.198,
+                    "mention_count": 8
+                }
+            ],
+            "topics": [
+                "tech",
+                "crypto",
+                "stocks",
+                "space"
+            ],
+            "key_insights": [
+                "Strong positive sentiment towards Tesla and Dogecoin",
+                "Frequent discussions about AI and technology",
+                "Mixed sentiment on crypto markets"
+            ]
+        },
+        "cz_binance": {
+            "overall_sentiment": "neutral",
+            "sentiment_score": 0.023,
+            "confidence": 0.76,
+            "tweet_count": 200,
+            "followers": 8500000,
+            "verified": true,
+            "tickers": [
+                {
+                    "ticker": "$BNB",
+                    "direction": "neutral",
+                    "sentiment_score": 0.045,
+                    "mention_count": 12
+                }
+            ],
+            "topics": [
+                "crypto",
+                "finance",
+                "blockchain"
+            ],
+            "key_insights": [
+                "Professional tone in crypto discussions",
+                "Neutral stance on market conditions",
+                "Focus on blockchain technology"
+            ]
+        },
+        "saylor": {
+            "overall_sentiment": "bullish",
+            "sentiment_score": 0.189,
+            "confidence": 0.82,
+            "tweet_count": 200,
+            "followers": 3200000,
+            "verified": true,
+            "tickers": [
+                {
+                    "ticker": "$BTC",
+                    "direction": "bullish",
+                    "sentiment_score": 0.267,
+                    "mention_count": 25
+                }
+            ],
+            "topics": [
+                "crypto",
+                "bitcoin",
+                "finance"
+            ],
+            "key_insights": [
+                "Extremely bullish on Bitcoin",
+                "Strong advocacy for crypto adoption",
+                "Educational content about digital assets"
+            ]
+        }
+    },
+    "rag_analysis": {
+        "cross_creator_patterns": [
+            {
+                "pattern": "crypto_sentiment",
+                "description": "High correlation in crypto-related sentiment across creators",
+                "confidence": 0.87
+            },
+            {
+                "pattern": "tech_optimism",
+                "description": "Consistent positive sentiment towards technology and AI",
+                "confidence": 0.92
+            }
+        ],
+        "similarity_matrix": {
+            "elonmusk": [
+                "saylor",
+                "naval"
+            ],
+            "cz_binance": [
+                "balajis",
+                "chamath"
+            ],
+            "saylor": [
+                "elonmusk",
+                "naval"
+            ]
+        }
+    },
+    "youtube_analysis": {
+        "videos_analyzed": 25,
+        "transcripts_processed": 20,
+        "sentiment_comparison": {
+            "elonmusk": {
+                "social_media_sentiment": 0.245,
+                "youtube_sentiment": 0.198,
+                "correlation": 0.78
+            }
+        }
+    },
+    "image_analysis": {
+        "images_processed": 15,
+        "financial_relevant_images": 8,
+        "charts_detected": 5,
+        "graphs_identified": 3
+    },
+    "report_generation": {
+        "pdf_created": true,
+        "file_path": "Sentiment_Analysis_Report_20240115_103000.pdf",
+        "pages": 12,
+        "sections": [
+            "Executive Summary",
+            "Creator Analysis",
+            "Sentiment Distribution",
+            "Ticker Analysis",
+            "Topic Classification",
+            "RAG Insights",
+            "YouTube Comparison",
+            "Image Analysis"
+        ]
+    }
+}
