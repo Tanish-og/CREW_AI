@@ -211,7 +211,7 @@ def create_pdf_report(results: Dict[str, Any], filename: str):
 
 def run_crewai_demo():
     """Run the complete CrewAI demo workflow"""
-    print("🎯 CrewAI Sentiment Analysis - Working Demo")
+    print("CrewAI Sentiment Analysis - Working Demo")
     print("=" * 60)
     
     # Define creators to analyze
@@ -228,12 +228,12 @@ def run_crewai_demo():
         "a16z"
     ]
     
-    print(f"📊 Analyzing {len(creators)} creators...")
+    print(f"Analyzing {len(creators)} creators...")
     print("Creators:", ", ".join(creators))
-    print("\n🚀 Starting CrewAI Workflow...")
+    print("\nStarting CrewAI Workflow...")
     
     # Simulate CrewAI Agent 1: Data Collection
-    print("\n🤖 Agent 1: X Data Collector")
+    print("\nAgent 1: X Data Collector")
     print("   Collecting tweets and profile data...")
     
     collected_data = {}
@@ -245,29 +245,29 @@ def run_crewai_demo():
             "verified": True,
             "bio": f"Financial analyst and content creator. #{creator}"
         }
-        print(f"   ✅ Collected {len(tweets)} tweets from @{creator}")
+        print(f"   Collected {len(tweets)} tweets from @{creator}")
     
     # Simulate CrewAI Agent 2: Sentiment Analysis
-    print("\n🤖 Agent 2: Sentiment Analyzer")
+    print("\nAgent 2: Sentiment Analyzer")
     print("   Analyzing sentiment, extracting tickers and topics...")
     
     analysis_results = {}
     for creator, data in collected_data.items():
         result = analyze_sentiment(data["tweets"])
         analysis_results[creator] = result
-        print(f"   ✅ Analyzed @{creator}: {result['overall_sentiment']} sentiment")
+        print(f"   Analyzed @{creator}: {result['overall_sentiment']} sentiment")
     
     # Simulate CrewAI Agent 3: Report Generation
-    print("\n🤖 Agent 3: Report Generator")
+    print("\nAgent 3: Report Generator")
     print("   Creating comprehensive PDF report...")
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     pdf_filename = f"Sentiment_Analysis_Report_{timestamp}.pdf"
     
     if create_pdf_report(analysis_results, pdf_filename):
-        print(f"   ✅ PDF report created: {pdf_filename}")
+        print(f"   PDF report created: {pdf_filename}")
     else:
-        print("   ⚠️ PDF creation failed, creating text report instead")
+        print("   PDF creation failed, creating text report instead")
         # Create text report as fallback
         text_filename = f"Sentiment_Analysis_Report_{timestamp}.txt"
         with open(text_filename, 'w') as f:
@@ -275,10 +275,10 @@ def run_crewai_demo():
             f.write("=" * 50 + "\n\n")
             for creator, data in analysis_results.items():
                 f.write(f"@{creator}: {data['overall_sentiment']} (Score: {data['sentiment_score']:.3f})\n")
-        print(f"   ✅ Text report created: {text_filename}")
+        print(f"   Text report created: {text_filename}")
     
     # Display results
-    print("\n📈 Analysis Results:")
+    print("\nAnalysis Results:")
     print("-" * 40)
     
     for creator, data in analysis_results.items():
@@ -298,20 +298,20 @@ def run_crewai_demo():
     bearish_count = sum(1 for data in analysis_results.values() if data["overall_sentiment"] == "bearish")
     neutral_count = len(analysis_results) - bullish_count - bearish_count
     
-    print("📊 Summary Statistics:")
+    print("Summary Statistics:")
     print(f"  Bullish creators: {bullish_count}")
     print(f"  Bearish creators: {bearish_count}")
     print(f"  Neutral creators: {neutral_count}")
     
-    print("\n🎉 CrewAI Workflow Completed Successfully!")
-    print("\n💡 This demo shows the complete functionality:")
-    print("   ✅ Multi-agent workflow (Data Collector, Sentiment Analyzer, Report Generator)")
-    print("   ✅ X data collection and processing")
-    print("   ✅ Advanced sentiment analysis with VADER and TextBlob")
-    print("   ✅ Financial ticker extraction and analysis")
-    print("   ✅ Topic identification and categorization")
-    print("   ✅ Professional PDF report generation")
-    print("   ✅ Comprehensive logging and error handling")
+    print("\nCrewAI Workflow Completed Successfully!")
+    print("\nThis demo shows the complete functionality:")
+    print("   - Multi-agent workflow (Data Collector, Sentiment Analyzer, Report Generator)")
+    print("   - X data collection and processing")
+    print("   - Advanced sentiment analysis with VADER and TextBlob")
+    print("   - Financial ticker extraction and analysis")
+    print("   - Topic identification and categorization")
+    print("   - Professional PDF report generation")
+    print("   - Comprehensive logging and error handling")
     
     return analysis_results
 
